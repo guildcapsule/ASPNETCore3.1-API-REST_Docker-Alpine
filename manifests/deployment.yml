@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: guildcapsuleaspnetcoreapirestdockeralpine 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: guildcapsuleaspnetcoreapirestdockeralpine
+  template:
+    metadata:
+      labels:
+        app: guildcapsuleaspnetcoreapirestdockeralpine 
+    spec:
+      containers:
+        - name: guildcapsuleaspnetcoreapirestdockeralpine 
+          image: crguildecapsule.azurecr.io/guildcapsuleaspnetcoreapirestdockeralpine
+          ports:
+          - containerPort: 80
